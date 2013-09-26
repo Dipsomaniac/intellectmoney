@@ -20,7 +20,7 @@ setup(
     #         os.path.dirname(__file__),
     #         'README.md'
     #     )
-    ).read(),
+    # ).read(),
     classifiers=(
         'Development Status :: 4 - Beta',
         'Environment :: Web Environment',
