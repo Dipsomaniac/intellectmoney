@@ -1,0 +1,10 @@
+{% extends 'simple_message.html' %}
+
+{% block extra_js %}
+{{ block.super }}
+{% if refresh %}
+<script>
+setTimeout("location.reload(true);", 3000);
+</script>
+{% endif %}
+{% endblock extra_js %}

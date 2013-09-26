@@ -1,0 +1,8 @@
+{% extends 'inner.html' %}
+
+{% block content %}
+    <h1>Спасибо за заказ!</h1>
+    <div class="b-unit">
+        <p>Чтобы посмотреть и распечатать ваши билеты, зайдите в раздел «<a href="{% url 'ticket_list' %}">Мои билеты</a>»</p>
+    </div>
+{% endblock content %}
