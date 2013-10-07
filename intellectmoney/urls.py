@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
 from django.conf.urls import patterns, url
+from . import views
 
-urlpatterns = patterns('apps.intellectmoney.views',
-    url(r'^result/$',  'receive_result', name='intellectmoney-result'),
-    url(r'^success/$',  'success', name='intellectmoney-success'),
-    url(r'^fail/$',  'fail', name='intellectmoney-fail'),
+urlpatterns = patterns('',
+    url(r'^result/$',  views.receive_result, name='intellectmoney-result'),
+    url(r'^success/$',  views.success, name='intellectmoney-success'),
+    url(r'^fail/$',  views.fail, name='intellectmoney-fail'),
 
 )
