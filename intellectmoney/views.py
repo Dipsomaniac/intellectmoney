@@ -44,8 +44,8 @@ def receive_result(request):
             subject = u'%sОповещение об оплате несуществующего счета #%s' % (
                 preffix, paymentId
             )
-            mail_managers(subject, message=u'Дата: %s' % info)
-            return HttpResponse(RESPONSE_SUCCESS)
+            mail_managers(subject, message=u'Дата: %s' % data)
+            return HttpResponse(RESPONSE_FAILURE)
 
         invoice.payment_id = paymentId
         invoice.save()
@@ -70,7 +70,7 @@ def receive_result(request):
         else:
             subject = u'%sПришло оповещение с неожидаемым статусом' % preffix
             mail_managers(subject, message=u'Дата: %s' % info)
-        return HttpResponse(RESPONSE_SUCCESS)
+        return HttpResponse(RESPONSE_FAILURE)
     else:
         subject = u'%sФорма оповещения платежа: невалидные данные' % preffix
         body = u'Ошибки в форме: %s\n\nДанные:%s' % (unicode(form.errors), info)
