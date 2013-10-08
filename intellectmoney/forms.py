@@ -41,6 +41,7 @@ class IntellectMoneyForm(_BasePaymentForm):
         ('transfers', u'Transfers'),
         ('sms', 'SMS'),
         ('bank', u'Bank'),
+        ('yandex', u'Яндекс.Деньги'),
         ('inner,bankCard,exchangers,terminals,bank,transfers,sms', u'All'),
         ('bankCard,exchangers,terminals,bank,transfers,sms', u'All without inner'),
     ]
