@@ -65,6 +65,7 @@ def receive_result(request):
             result_received.send(
                 sender=invoice, orderId=orderId, recipientAmount=recipientAmount,
             )
+            return HttpResponse(RESPONSE_SUCCESS)
         elif paymentStatus == 3:
             return HttpResponse(RESPONSE_SUCCESS)
         else:
