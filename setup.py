@@ -8,7 +8,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='django-intellectmoney',
-    version='0.0.1',
+    version='0.1.0',
     author='Andrey Beletsky',
     author_email='andrey@vr2.net',
     packages=find_packages(exclude=['docs', 'tests']),
