@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
 from urllib import urlencode
-from .helpers import cheskHashOnReceiveResult, getHashOnRequest
+
 from django import forms
-import settings
+from django.conf import settings
+
+from .helpers import cheskHashOnReceiveResult, getHashOnRequest
 
 
 class _BaseForm(forms.Form):
